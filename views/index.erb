@@ -1,0 +1,19 @@
+<h1>Employee Tracker</h1>
+
+<p>Here are all of your employees</p>
+
+<ul>
+  <% @employees.not_assigned().each do |employee| %>
+    <li><%= employee.name %></li>
+  <% end %>
+</ul>
+
+<% @employees.each() do |employee| %>
+    <li><%= employee.name %> <a href="/employees/<%= employee.id() %>/edit">Update this employee's name</a></li>
+  <% end %>
+
+<div class="container">
+  <a href="/divisions">View All Divisions</a>
+  <a href="/divisions/new">Add New Division</a>
+  <a href="/employees">Show all employees</a>
+</div>

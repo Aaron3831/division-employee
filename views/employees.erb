@@ -1,0 +1,16 @@
+<h1>Your Current employees</h1>
+
+<% if @employees.any?() %>
+  <h3>Here are your employees:</h3>
+
+  <ul>
+    <% @employees.each() do |employee| %>
+      <li><%= employee.name() %></a> </li>
+    <% end %>
+  </ul>
+
+<% else %>
+
+    <p>There are no employees yet!</p>
+
+<% end %>
